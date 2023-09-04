@@ -127,3 +127,9 @@ Use ctrl+c to terminate bootRun task.
 RESTful architecture has gained immense popularity due to its simplicity, scalability, and compatibility with the HTTP protocol. It's widely used for building web APIs that enable different client applications (web, mobile, desktop) to communicate with servers over the internet.
 
 --------------------------------------------------
+`RuntimeException` is the superclass of those exceptions that can be thrown during the normal operation of the Java Virtual Machine.
+RuntimeException and its subclasses are **unchecked** exceptions. Unchecked exceptions do not need to be declared in a method or constructor's `throws` clause if they can be thrown by the execution of the method or constructor and propagate outside the method or constructor boundary.
+--------------------------------------------------
+**_ISSUE_ : Error message not displayed with** `ResponseStatusException` : 
+This behavior has changed with Spring Boot 2.3 and is intentional.
+Setting `server.error.include-message=always` in the `application.properties` resolves this issue.

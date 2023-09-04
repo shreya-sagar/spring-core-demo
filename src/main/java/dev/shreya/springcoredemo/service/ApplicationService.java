@@ -8,5 +8,6 @@ import org.springframework.stereotype.Service;
 public interface ApplicationService {
 
   public List<Application> findAll();
+  public Application findById(Long id);
 
 }
